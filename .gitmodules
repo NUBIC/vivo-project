@@ -1,6 +1,8 @@
 [submodule "VIVO"]
 	path = VIVO
 	url = https://github.com/vivo-project/VIVO.git
+  ignore = dirty
 [submodule "Vitro"]
 	path = Vitro
 	url = https://github.com/vivo-project/Vitro.git
+  ignore = dirty
