@@ -22,14 +22,12 @@ $ cd ..
 # Copy default deploy.properties and edit
 $ cp example.build.properties build.properties
 $ cp example.runtime.properties runtime.properties
-$ cp example.applicationSetup.n3 applicationSetup.n3
 # Adjust build and runtime properties
 # Create the data directory specified in build.properties if it doesn't exist.
 # e.g. $ mkdir -p /usr/local/vivo_project/home
 $ cp runtime.properties /usr/local/vivo_project/home
 # Build and deploy VIVO
 $ ant all
-$ cp applicationSetup.n3 /usr/local/vivo_project/home/config/applicationSetup.n3
 ~~~
 
 ###VIVO development
