@@ -1,5 +1,5 @@
-#VIVO project template
-This is a git repository template for working with and customizing [VIVO](http://vivoweb.org/).  It uses the [three tiered build approach](https://wiki.duraspace.org/display/VIVO/Building+VIVO+in+3+tiers) documented by the VIVO project.  The project source files (VIVO and Vitro) are tracked using [Git Submodules](http://git-scm.com/book/en/Git-Tools-Submodules).
+#Northwestern University VIVO project
+This is a git repository for the Northwestern [VIVO](http://vivoweb.org/) instance.  It uses the [three tiered build approach](https://wiki.duraspace.org/display/VIVO/Building+VIVO+in+3+tiers) documented by the VIVO project.  The project source files (VIVO and Vitro) are tracked using [Git Submodules](http://git-scm.com/book/en/Git-Tools-Submodules).  This project is a fork of the [VIVO project template](https://github.com/lawlesst/vivo-project-template) repository created by [Ted Lawless](https://github.com/lawlesst).
 
 For a more detailed explanation of setting up the VIVO environment, consult the [VIVO version 1.7 installation instructions](https://wiki.duraspace.org/display/VIVO/Installing+VIVO+release+1.7).
 
