@@ -529,6 +529,15 @@ header {
 			opacity: 0.7;
 		}
 
+        #FeinbergHomeText h4 a:hover .arrow {
+            background: url("http://deptcommon.fsm.northwestern.edu/images/nm/NM-FSM-sprite.png") no-repeat scroll -100px -98px rgba(0, 0, 0, 0);
+            display: inline-block;
+            height: 16px;
+            margin-left: 12px;
+            opacity: 0.5;
+            width: 15px;
+        }
+
 	#FeinbergHomeText h1 {
 	    font-size: 40px;
 	    margin: 5px 0;
@@ -1030,10 +1039,11 @@ a.view-all-style {
 #stats .stats-count { 
     color: #61468b;
 }
-#stats .stats-count span {
-		color: #fff;
-		opacity: .5;
-}
+    #stats .stats-count span {
+        display: inline-block !important;
+        opacity: .5;
+    }
+    
 #stats a:hover { text-decoration: none !important;}
 #stats .stats-type {
     border-top: 1px solid #CCC;
@@ -1690,6 +1700,25 @@ img.co-author {
     background: none;
 }
 /* PROPERTY GROUP ------>  */
+div#wrapper-content section.property-group div article.property:first-of-type { 
+    margin-top: -15px !important; 
+}
+
+section.property-group h2:first-of-type {
+    border-top: 0px !important;
+    margin-top: 0 !important;
+}
+section.property-group h2 {
+    background-color: #efefef !important;
+    margin-bottom: -1em !important;
+}
+
+section.property-group div article.property { margin-top: -15px !important; }
+
+section.property-group { border-top: 1px solid #DFE6E5; }
+
+section.property-group h2 { margin-top: -1em !important; }
+
 section.property-group h2,
 #menupage-content h4 {
     font-size: 1.25em;
@@ -1701,6 +1730,7 @@ article.property {
 }
 article.property h3 {
     background: #efefef;
+    background-color: #fafaf9;
     color: #61468b;
     font-size: 1.063em;
 }
