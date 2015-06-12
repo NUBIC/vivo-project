@@ -124,7 +124,7 @@
             <#if (group.individualCount > 0) && group.uri?contains("publications") >
                 <#assign foundClassGroup = true />
                 <#list group.classes as class>
-                    <#if (class.individualCount > 0) && (class.uri?contains("AcademicArticle") || class.uri?contains("Book") || class.uri?contains("Chapter") ||class.uri?contains("ConferencePaper") || class.uri?contains("Grant") || class.uri?contains("Report")) >
+                    <#if (class.uri?contains("AcademicArticle") || class.uri?contains("Journal") || class.uri?contains("Comment") || class.uri?contains("Letter") || class.uri?contains("NewsRelease")) >
                         <li role="listitem">
                             <a href='${urls.base}/individuallist?vclassId=${class.uri?replace("#","%23")!}'>
                                 <div class="number"><span>${class.individualCount!}</span></div><#if class.name?substring(class.name?length-1) == "s">${class.name}<#else>${class.name}s</#if>

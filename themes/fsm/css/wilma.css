@@ -644,6 +644,11 @@ input.search-vivo {
 #search-form-modifier {
     display: none;
 }
+
+.home #browse { padding-top: 7px; float: right; font-size: .85em; }
+
+.home #browse:before { content:"or ";}
+
 /* MAIN NAVIGATION------>  */
 ul#main-nav {
     display: block;
@@ -703,9 +708,6 @@ ul#main-nav {
     width: 570px;
     padding-bottom: 50px;
 }
-body.loggedIn #intro {
-    width: 98%;
-}
 #intro h2 {
     padding: 35px 0 12px 24px;
     border-bottom: none;
@@ -729,6 +731,15 @@ ul.individual-urls li a,
 ul.individual-urls-people li a {
     color: #2485ae
 }
+
+.home #home-image {
+    border: 8px solid #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.38);
+    float: right;
+    height: 300px;
+}
+
 /* LOG IN------>  */          
 #login {
     float: right;
@@ -990,6 +1001,17 @@ ul#header-nav a {
 		color: #ccc;
 }
 
+/* HOME IMAGE------>  */ 
+
+#image-home {
+    float: right;
+    padding: 20px;
+    width: 300px;
+}
+    #image-home img { 
+        border-radius: 10px;
+    }
+
 /* BROWSE ------>  */
 ul#browse-classgroups a {
     padding-top: 3px;
@@ -1025,6 +1047,8 @@ a.view-all-style {
 .home-sections h4 {
     color: #61468b;
 }
+
+
 #home-stats {
 		margin-top: 30px;
 }
@@ -1062,6 +1086,7 @@ a.view-all-style {
     padding: 0.4em 0 0.6em 0.5em;
 }
 #home-research li {
+    clear: both;
 	line-height: 1.25em;
 	margin-top: 0.7em; 
 	font-size: 0.9em;
@@ -1074,6 +1099,7 @@ a.view-all-style {
     background: url("../images/li-background_FSM-angle.png") no-repeat scroll 0 0 #775E9E;
     float: left;
     height: 28px;
+    margin-bottom: 1em;
     margin-right: .5em;
     padding-left: 10px;
     padding-top: 0.2em;
@@ -1124,6 +1150,11 @@ div#tempSpacing {
     padding-left:20px;
     height:325px;
 }
+
+#home-faculty-mbrs ul#facultyThumbs {
+    margin-left: .7em;
+}
+
 div#research-faculty-mbrs {
     font-size: 0.9em;
     line-height: 16px;
@@ -1140,11 +1171,8 @@ div#research-faculty-mbrs li h1 {
     padding: 6px 0 2px 0;
 }
 div#research-faculty-mbrs li img {
-    border: 1px solid #dde3e1;
-    border-radius: 10px;
     width: 60px;  
     float: left;
-    margin: 0px 8px 10px 10px;
 }
 div#research-faculty-mbrs li span.title {
     display: block;
@@ -1161,11 +1189,19 @@ div#research-faculty-mbrs ul#viewMoreFac li {
     clear:both;
 }
 div#adjImgHeight {
-    height:65px;
-    overflow:hidden;
-    float:left;
-    margin-bottom:10px;
+    border-radius: 5px;
+    float: left;
+    height: 75px;
+    margin: 0 10px 10px 0;
+    overflow: hidden;
+    width: 60px;
 }
+    /* Fix for short images */
+    #home-faculty-mbrs #research-faculty-mbrs ul#facultyThumbs li.individual > img {
+        border-radius: 5px;
+        margin: 0 10px 10px 0;
+    }
+
 #home-geo-focus  {
 	clear: both;
 	display: inline-block; 
@@ -1956,3 +1992,4 @@ span.subclassExpandMinus {
 /* CUSTOM */
 ul.no-bullet { list-style: none !important; margin: 0 !important; padding: 0; }
 ul.no-bullet li { margin-left: 0 !important; }
+.siteMap h2 { text-transform: capitalize !important; }
