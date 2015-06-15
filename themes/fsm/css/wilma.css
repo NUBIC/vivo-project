@@ -700,6 +700,7 @@ ul#main-nav {
     margin: 0 auto;
     background: #fff;
     min-height: 710px;
+    overflow: auto;
     padding: 20px;
 }
 /* INTRO-BLURB ------>  */
