@@ -1189,6 +1189,7 @@ div#research-faculty-mbrs ul#viewMoreFac li {
     padding: 0 16px 8px 0;
     clear:both;
 }
+div.adjImgHeight,
 div#adjImgHeight {
     border-radius: 5px;
     float: left;
