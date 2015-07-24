@@ -19,9 +19,9 @@ revisionInfo
 .project
 .settings
 
-fsm_vivo.zip
-IndividualTemplateModel.class
-
 custom-vivo/
 legacy_files/
 rdf_files/
+
+fsm_vivo.zip
+IndividualTemplateModel.class
