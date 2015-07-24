@@ -170,4 +170,8 @@ public class IndividualTemplateModel extends BaseIndividualTemplateModel {
         }
         return fsmFacultyProfileID;
     } 
+
+    public String getUriSuffix() {
+        return individual.getURI().replace("http://vivo.northwestern.edu/individual/n", "");
+    }
 }
