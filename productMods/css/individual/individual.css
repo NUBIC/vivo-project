@@ -197,6 +197,7 @@ article.property ul.subclass-property-list {
 }
 article.property ul.subclass-property-list li {
     line-height: 1.2em;
+    margin-bottom: 0.35em !important;
     padding: 0 20px 10px 20px;
 }
 /* EDITING DISPLAY------>  */

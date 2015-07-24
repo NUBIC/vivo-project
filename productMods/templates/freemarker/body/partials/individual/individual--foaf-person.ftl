@@ -61,8 +61,8 @@
 
     <section id="individual-info" ${infoClass!} role="region"> 
     <section id="right-hand-column" role="region">
-        <#include "individual-visualizationFoafPerson.ftl">    
-        </section>
+        <#include "individual-visualizationFoafPerson.ftl">
+    </section>
         <#include "individual-adminPanel.ftl">
         
         <header>

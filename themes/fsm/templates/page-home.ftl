@@ -42,7 +42,8 @@
         
                 <fieldset>
                     <legend>${i18n().search_form}</legend>
-                    <form id="search-homepage" action="${urls.search}" name="search-home" role="search" method="post" > 
+                    <form id="search-homepage" action="${urls.search}" name="search-home" role="search" method="post" >
+                        <a id="browse" href="browse">Browse All</a>
                         <div id="search-home-field">
                             <input type="text" name="querytext" class="search-homepage" value="" autocapitalize="off" />
                             <input type="submit" value="${i18n().search_button}" class="search" />
@@ -64,8 +65,11 @@
         </section> <!-- #intro -->
         
         <#-- REMOVE LOG IN
-        <@widget name="login" />
+            <@widget name="login" />
         -->
+        <section id="home-image" role="region">
+            <img src="/vivo_project/themes/fsm/images/feinberg-ward.jpg" width="300" height="300" alt="Feinberg School of Medicine, Northwestern University" />
+        </section>
 
         <!-- List of research classes: e.g., articles, books, collections, conference papers -->
         <@lh.researchClasses />
@@ -81,8 +85,9 @@
             <@lh.geographicFocusHtml />
         </#if>
         
-        <!-- Statistical information relating to property groups and their classes; displayed horizontally, not vertically-->
-        <@lh.allClassGroups vClassGroups! />
+        <!-- Statistical information relating to property groups and their classes; displayed horizontally, not vertically
+            <@lh.allClassGroups vClassGroups! />
+        -->
 
         <#include "footer.ftl">
         <#-- builds a json object that is used by js to render the academic departments section -->
