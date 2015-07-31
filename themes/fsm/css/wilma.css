@@ -1997,3 +1997,7 @@ span.subclassExpandMinus {
 ul.no-bullet { list-style: none !important; margin: 0 !important; padding: 0; }
 ul.no-bullet li { margin-left: 0 !important; }
 .siteMap h2 { text-transform: capitalize !important; }
+
+span#sparklineHeading, div#vis_container_coauthor { display: none; }
+#individual-info ul { font-size: 0.9em; }
+
