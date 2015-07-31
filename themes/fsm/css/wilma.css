@@ -540,7 +540,7 @@ header {
 
 	#FeinbergHomeText h1 {
 	    font-size: 40px;
-	    margin: 5px 0;
+	    margin: 0;
 	}
 
 #branding #search {
@@ -653,7 +653,7 @@ input.search-vivo {
 ul#main-nav {
     display: block;
     width: 968px;
-    height: 46px;
+    height: 42px;
     border: none;
     background-color: #e6e6e6;
     margin: 0 auto;
@@ -663,7 +663,7 @@ ul#main-nav {
 }
 #main-nav li {
     float: left;
-    line-height: 46px;
+    line-height: 42px;
 }
 
     #main-nav li:first-of-type { padding-left: 15px; }
@@ -671,7 +671,7 @@ ul#main-nav {
 
 #main-nav li a {
     border-right: 2px solid #FFF;
-    font-size: 21px;
+    font-size: 18px;
     padding: 0px 10px;
     display: block;
     color: #54585a;
@@ -710,7 +710,7 @@ ul#main-nav {
     padding-bottom: 50px;
 }
 #intro h2 {
-    padding: 35px 0 12px 24px;
+    padding: 15px 0 12px 24px;
     border-bottom: none;
     color: #2485AE;
 }
@@ -1389,11 +1389,13 @@ ul#individual-tools-people li a {
 #menupage-intro {
     width: 920px;
     background: #fff;
+    margin: 0.5em auto !important;
 }
 #menupage-intro h2 {
     font-size: 1.375em;
     color: #064d68;
     font-weight: normal;
+    padding-bottom: 0px !important;
 }
 #menupage-intro.people h2 {
     float: left;
