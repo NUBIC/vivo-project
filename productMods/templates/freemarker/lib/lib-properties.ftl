@@ -259,7 +259,7 @@ name will be used as the label. -->
 <#macro image individual propertyGroups namespaces editable showPlaceholder="never" imageWidth=160 >
     <#local mainImage = propertyGroups.pullProperty("${namespaces.vitroPublic}mainImage")!>
     <#local thumbUrl = individual.thumbUrl!>
-    <#local fsmProfileId = propertyGroups.pullProperty("http://vivo.northwestern.edu/ontology/vlocal#fsmFacultyProfileID")! >
+    <#local fsmProfileId = individual.getFSMFacultyProfileID()!>
     <#-- Don't assume that if the mainImage property is populated, there is a thumbnail image (though that is the general case).
          If there's a mainImage statement but no thumbnail image, treat it as if there is no image. -->
     <#if fsmProfileId?has_content>

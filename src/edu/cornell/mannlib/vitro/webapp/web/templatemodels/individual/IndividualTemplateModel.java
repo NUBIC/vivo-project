@@ -122,32 +122,13 @@ public class IndividualTemplateModel extends BaseIndividualTemplateModel {
      * - default person image: images/placeholders/person.thumbnail.jpg
      */
     public String getImageUrl() {
-        // List<DataProperty> dataPropertyList = individual.getDataPropertyList();
-        // for (DataProperty dp : dataPropertyList) {
-        //     log.info("~~~ inspecting DataProperty " + dp.toString());
-        //     log.info("~~~ ~~~ publicName = " + dp.getPublicName());
-        //     log.info("~~~ ~~~ localName = " + dp.getLocalName());
-        //     log.info("~~~ ~~~ name = " + dp.getName());
-        // }
-        String fsmFacultyProfileID = null;
-        List<DataPropertyStatement> stmts = individual.getDataPropertyStatements();
-        for (DataPropertyStatement dps : stmts) {
-            if(dps.getDatapropURI().contains("fsmFacultyProfileID")) {
-                fsmFacultyProfileID = dps.getData();
-            }
-
-        }
+        String fsmFacultyProfileID = getFSMFacultyProfileID();
         if(fsmFacultyProfileID == null) {
-            log.info("~~~ fsmFacultyProfileID is null");
             String imageUrl = individual.getImageUrl();
             String retval = imageUrl == null ? null : getUrl(imageUrl);
-            log.info("~~~ returning " + retval);
             return retval;
         } else {
-            log.info("~~~ fsmFacultyProfileID is " + fsmFacultyProfileID);
-            String retval = "http://deptcommon.fsm.northwestern.edu/ws/getFacultyPhoto.php?xid=" + fsmFacultyProfileID;
-            log.info("~~~ returning " + retval);
-            return retval;
+            return "http://deptcommon.fsm.northwestern.edu/ws/getFacultyPhoto.php?xid=" + fsmFacultyProfileID;
         }
 
     }
@@ -156,38 +137,41 @@ public class IndividualTemplateModel extends BaseIndividualTemplateModel {
      * Overriding method in BaseIndividualTemplateModel
      */
     public String getThumbUrl() {
-        // List<DataProperty> dataPropertyList = individual.getDataPropertyList();
-        // for (DataProperty dp : dataPropertyList) {
-        //     log.info("~~~ inspecting DataProperty " + dp.toString());
-        //     log.info("~~~ ~~~ publicName = " + dp.getPublicName());
-        //     log.info("~~~ ~~~ localName = " + dp.getLocalName());
-        //     log.info("~~~ ~~~ name = " + dp.getName());
-        // }
+        String fsmFacultyProfileID = getFSMFacultyProfileID();
+        if(fsmFacultyProfileID == null) {
+            String thumbUrl = individual.getThumbUrl();            
+            String retval = thumbUrl == null ? null : getUrl(thumbUrl);
+            return retval;
+        } else {
+            return "http://deptcommon.fsm.northwestern.edu/ws/getFacultyPhoto.php?xid=" + fsmFacultyProfileID;
+        }
+    }
+
+    /**
+     * Returns the Feinberg School of Medicine (FSM) Faculty Profile URL
+     * from the individual or null if the property could not be found.
+     */
+    public String getFSMFacultyProfileUrl() {
+        String fsmFacultyProfileID = getFSMFacultyProfileID();
+        return "http://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=" + fsmFacultyProfileID;
+    }
+
+    /**
+     * Returns the Feinberg School of Medicine (FSM) Faculty Profile ID property
+     * from the individual or null if the property could not be found.
+     */
+    public String getFSMFacultyProfileID() {
         String fsmFacultyProfileID = null;
         List<DataPropertyStatement> stmts = individual.getDataPropertyStatements();
         for (DataPropertyStatement dps : stmts) {
-            log.info("~~~ inspecting DataPropertyStatement " + dps.toString());
-            log.info("~~~ ~~~ data = " + dps.getData());
-            log.info("~~~ ~~~ datapropURI = " + dps.getDatapropURI());
-
             if(dps.getDatapropURI().contains("fsmFacultyProfileID")) {
-                log.info("~~~ ~~~ setting fsmFacultyProfileID to " + dps.getData());
                 fsmFacultyProfileID = dps.getData();
             }
-
         }
-        if(fsmFacultyProfileID == null) {
-            log.info("~~~ fsmFacultyProfileID is null");
-            String thumbUrl = individual.getThumbUrl();            
-            String retval = thumbUrl == null ? null : getUrl(thumbUrl);
-            log.info("~~~ returning " + retval);
-            return retval;
-        } else {
-            log.info("~~~ fsmFacultyProfileID is " + fsmFacultyProfileID);
-            String retval = "http://deptcommon.fsm.northwestern.edu/ws/getFacultyPhoto.php?xid=" + fsmFacultyProfileID;
-            log.info("~~~ returning " + retval);
-            return retval;
-        }
+        return fsmFacultyProfileID;
     } 
 
+    public String getUriSuffix() {
+        return individual.getURI().replace("http://vivo.northwestern.edu/individual/n", "");
+    }
 }
