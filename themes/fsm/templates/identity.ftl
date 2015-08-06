@@ -12,7 +12,7 @@
     <div id="FeinbergHomeText" style="padding:5px 15px;">
         <h4><a href="http://nucats.northwestern.edu/">Northwestern University Clinical and Translational Sciences<span class="arrow">&nbsp;</span></a></h4>
         <div id="siteTitle">
-            <h1><a href="/">VIVO</a>
+            <h1><a href="/vivo/">VIVO</a>
         </h1>
     </div>
 
