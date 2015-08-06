@@ -2000,4 +2000,5 @@ ul.no-bullet li { margin-left: 0 !important; }
 
 span#sparklineHeading, div#vis_container_coauthor { display: none; }
 #individual-info ul { font-size: 0.9em; }
+ul.propertyTabsList { margin-top: 0; }
 

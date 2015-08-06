@@ -73,7 +73,9 @@
             <#else>                
                 <h1 class="vcard foaf-person">
                     <#-- Label -->
-                    <span itemprop="name" class="fn"><@p.label individual editable labelCount localesCount/></span>
+                    <#assign iname = individual.getFNameLName()>
+                    <span itemprop="name" class="fn">${iname}</span>
+                    <#-- span itemprop="name" class="fn"><@p.label individual editable labelCount localesCount/></span -->
 
                     <#--  Display preferredTitle if it exists; otherwise mostSpecificTypes -->
                     <#assign title = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028","http://www.w3.org/2006/vcard/ns#Title")!>

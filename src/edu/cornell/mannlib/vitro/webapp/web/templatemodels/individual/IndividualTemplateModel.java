@@ -174,4 +174,11 @@ public class IndividualTemplateModel extends BaseIndividualTemplateModel {
     public String getUriSuffix() {
         return individual.getURI().replace("http://vivo.northwestern.edu/individual/n", "");
     }
+
+    public String getFNameLName() {
+        String name = individual.getName();
+        String[] arr = name.split(",");
+        String fl = arr[1] + " " + arr[0];
+        return fl.trim();
+    }
 }
