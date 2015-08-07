@@ -68,7 +68,7 @@
             <@widget name="login" />
         -->
         <section id="home-image" role="region">
-            <img src="/vivo_project/themes/fsm/images/feinberg-ward.jpg" width="300" height="300" alt="Feinberg School of Medicine, Northwestern University" />
+            <img src="/vivo/themes/fsm/images/feinberg-ward.jpg" width="300" height="300" alt="Feinberg School of Medicine, Northwestern University" />
         </section>
 
         <!-- List of research classes: e.g., articles, books, collections, conference papers -->
