@@ -1,0 +1,75 @@
+~/work/vivo/prod/vivo 
+$ find . -name 'individual--foaf-person.ftl'
+./templates/freemarker/body/individual/individual--foaf-person.ftl
+./templates/freemarker/body/partials/individual/individual--foaf-person.ftl
+./themes/fsm/templates/individual--foaf-person.ftl
+./themes/wilma/templates/individual--foaf-person.ftl
+
+~/work/vivo/prod/vivo 
+$ find . -name 'individual-positions.ftl'
+./templates/freemarker/body/partials/individual/individual-positions.ftl
+
+~/work/vivo/prod/vivo 
+$ find . -name 'propStatement-personInPosition.ftl'
+./templates/freemarker/body/partials/individual/propStatement-personInPosition.ftl
+
+~/work/vivo/prod/vivo 
+$ find . -name 'lib-home-page.ftl'
+./templates/freemarker/lib/lib-home-page.ftl
+
+~/work/vivo/prod/vivo 
+$ find . -name 'lib-properties.ftl'
+./templates/freemarker/lib/lib-properties.ftl
+
+~/work/vivo/prod/vivo 
+$ find . -name 'homePageUtils.js'
+./js/homePageUtils.js
+
+~/work/vivo/prod/vivo 
+$ find . -name 'vitroUtils.js'
+./js/vitroUtils.js
+
+~/work/vivo/prod/vivo 
+$ find . -name 'propertyGroupControls.js'
+./js/individual/propertyGroupControls.js
+
+~/work/vivo/prod/vivo 
+$ find . -name 'fsm.png'
+./images/individual/fsm.png
+
+~/work/vivo/prod/vivo 
+$ find . -name 'pie_chart.png'
+./images/individual/pie_chart.png
+
+~/work/vivo/prod/vivo 
+$ find . -name 'uriIcon.gif'
+./images/individual/uriIcon.gif
+
+~/work/vivo/prod/vivo 
+$ find . -name 'wordle.png'
+./images/individual/wordle.png
+
+~/work/vivo/prod/vivo 
+$ find . -name 'vitro.css'
+./css/vitro.css
+
+~/work/vivo/prod/vivo 
+$ find . -name 'individual-property-groups.css'
+./css/individual/individual-property-groups.css
+
+~/work/vivo/prod/vivo 
+$ find . -name 'individual.css'
+./css/individual/individual.css
+
+~/work/vivo/prod/vivo 
+$ find . -name 'menupage.css'
+./css/menupage/menupage.css
+
+~/work/vivo/prod/vivo 
+$ find . -name 'visualization.css'
+./css/visualization/visualization.css
+
+~/work/vivo/prod/vivo 
+$ find . -name 'layout.css'
+./css/visualization/entitycomparison/layout.css
+./css/visualization/mapofscience/layout.css
