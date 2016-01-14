@@ -5,7 +5,43 @@ For a more detailed explanation of setting up the VIVO environment, consult the
 [VIVO version 1.8 installation
 instructions](https://wiki.duraspace.org/display/VIVO/Installing+VIVO+release+1.8).
 
+As of December 2015, the project's develop branch using [Maven](https://maven.apache.org/) for its build tool. Follow the directions below for building your custom VIVO project with Maven. 
+
 ##Checking out the project and building VIVO in three tiers
+
+### Develop branch
+~~~
+
+    git clone https://github.com/lawlesst/vivo-project-template.git vivo
+    cd vivo
+    git submodule init
+
+#Pull in VIVO and Vitro.  This will take a few minutes.
+
+    git submodule update
+
+#Check out specific versions of VIVO and Vitro
+
+    cd VIVO
+    git checkout develop
+    cd ../Vitro
+    git checkout develop
+
+#Change back to vivo main directory
+
+    cd ../VIVO
+
+# Copy default-settings.xml
+
+cp custom-vivo/default-settings.xml custom-vivo/custom-settings.xml
+
+#Using a text editor, change the settings for the VIVO home directory, Tomcat location, and theme to match your environment. 
+
+#Build and deploy
+
+mvn install -s custom-vivo/custom-settings.xml
+
+~~~
 
 ###VIVO 1.8
 ~~~
@@ -85,7 +121,11 @@ $ tail -F /usr/local/tomcat8/logs/catalina.out
 # Login as root - using default initial password "rootPassword" 
 # (cf. installation instructions pdf for VIVO 1.7)
 =======
+=======
+
 ###VIVO 1.7
+This project template makes it easy to switch between versions of VIVO. To build version 1.7, follow these steps. 
+
 ~~~
 $ git clone https://github.com/lawlesst/vivo-project-template.git vivo
 $ cd vivo
