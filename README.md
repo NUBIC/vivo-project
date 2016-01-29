@@ -84,7 +84,9 @@ $ tail -F /usr/local/tomcat8/logs/catalina.out
 # Open browser and goto http://localhost:8080/vivo_project
 # Login as root - using default initial password "rootPassword" 
 # (cf. installation instructions pdf for VIVO 1.7)
-=======
+
+~~~
+
 ###VIVO 1.7
 ~~~
 $ git clone https://github.com/lawlesst/vivo-project-template.git vivo
