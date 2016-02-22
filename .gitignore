@@ -1,22 +1,30 @@
-#Config
+legacy_files/
+
+# Config
 deploy.properties
 build.properties
 runtime.properties
-applicationSetup.n3
+
+# local settings
+custom-vivo/settings.xml
 
 #Build dir
 .build/
+target/
 
-#Release files
+# Release files
 vivo-rel-1.5.1
 vitro-data
 data
 vivo-rel-1.5.1.zip
 revisionInfo
 
-#Eclipse
+# Eclipse
 .classpath
 .project
 .settings
-fsm_vivo.zip
-IndividualTemplateModel.class
+
+# IntelliJ IDE files
+*.iml
+
+custom-vivo/.idea/
