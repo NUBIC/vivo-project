@@ -22,6 +22,6 @@
 
 
 &lt;p&gt;See more information on the &lt;a href="http://vivoweb.org"&gt;VIVO Project&lt;/a&gt;.&lt;/p&gt;</j.0:aboutText>
-         <j.0:themeDir rdf:datatype="http://www.w3.org/2001/XMLSchema#string">themes/wilma/</j.0:themeDir>
+         <j.0:themeDir rdf:datatype="http://www.w3.org/2001/XMLSchema#string">themes/${default-theme}/</j.0:themeDir>
       </rdf:Description>
 </rdf:RDF>
