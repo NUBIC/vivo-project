@@ -136,4 +136,15 @@
     <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-12-28T13:05:00</vitro:modTime>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
+
+  <rdf:Description rdf:about="http://vivoweb.org/ontology#vitroPropertyGroupData">
+    <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-02-18T11:08:00</vitro:modTime>
+    <rdfs:label xml:lang="en-US">data</rdfs:label>
+    <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Dataset associations
+    </vitro:publicDescriptionAnnot>
+    <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1011</vitro:displayRank>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
 </rdf:RDF>
