@@ -52,7 +52,13 @@ display:EventsMenuItem
     display:menuPosition 5;
     display:linkText "Events";
     display:toPage display:Events .        
-    
+       
+display:DataMenuItem
+    a display:NavigationElement ;
+    display:menuPosition 6;
+    display:linkText "Data";
+    display:toPage display:Data .
+
 display:Home 
     a display:HomePage ;    
     a display:Page ;
@@ -93,7 +99,13 @@ display:Research
     display:urlMapping "/research" ;
     display:hasDataGetter display:researchDataGetter .
 
-
+display:Data
+    a display:Page ;
+    a display:ClassGroupPage;
+    display:forClassGroup vivoweb:vitroClassGroupData ;
+    display:title "Data" ;
+    display:urlMapping "/data" ;
+    display:hasDataGetter display:dataDataGetter .
     
 #The data getter objects used above
 display:peopleDataGetter
@@ -118,3 +130,7 @@ display:eventsDataGetter
               
 display:homeDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.BrowseDataGetter> .
+
+display:dataDataGetter
+    a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData> ;
+    display:forClassGroup vivoweb:vitroClassGroupData .
