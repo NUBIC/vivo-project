@@ -28,7 +28,6 @@
         <module>home</module>
         <module>solr</module>
         <module>webapp</module>
-        <module>api</module>
     </modules>
 
     <profiles>
