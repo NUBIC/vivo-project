@@ -7,7 +7,7 @@
             <properties>
                 <app-name>vivo</app-name>
 
-                <vivo-dir>/usr/local/nubicvivo/home</vivo-dir>
+                <vivo-dir>/usr/local/vivo/home</vivo-dir>
                 <tomcat-dir>/usr/local/tomcat7</tomcat-dir>
 
                 <default-theme>fsm</default-theme>
