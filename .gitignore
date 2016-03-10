@@ -29,3 +29,4 @@ revisionInfo
 
 custom-vivo/.idea/
 rdf_files/
+*.diff
