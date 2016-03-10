@@ -1,9 +1,10 @@
-@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dcat:  <http://www.w3.org/ns/dcat#> .
-@prefix vivo:  <http://vivoweb.org/ontology#> .
+@prefix vitro:  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix vivo:   <http://vivoweb.org/ontology#> .
+@prefix vlocal: <http://vivo.northwestern.edu/ontology/vlocal#> .
 
 <http://www.w3.org/ns/dcat>
     vitro:ontologyPrefixAnnot "dcat"^^<http://www.w3.org/2001/XMLSchema#string> ;
@@ -42,4 +43,11 @@ dcat:downloadURL
     vitro:inPropertyGroupAnnot vivo:vitroPropertyGroupData .
 
 dcat:mediaType
+    vitro:inPropertyGroupAnnot vivo:vitroPropertyGroupData .
+
+
+vlocal:datasetManagedBy
+    vitro:inPropertyGroupAnnot vivo:vitroPropertyGroupData .
+
+vlocal:managesDataset
     vitro:inPropertyGroupAnnot vivo:vitroPropertyGroupData .

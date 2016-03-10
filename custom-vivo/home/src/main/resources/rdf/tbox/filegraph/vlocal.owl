@@ -387,4 +387,18 @@ http://www.nlm.nih.gov/cgi/mesh/2015/MB_cgi?term=CONTROLLED+CLINICAL+TRIAL&#xD;
     <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
     <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</vitro:displayLimitAnnot>
   </rdf:Description>
+
+    <owl:ObjectProperty rdf:about="http://vivo.northwestern.edu/ontology/vlocal#datasetManagedBy">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dataset managed by</rdfs:label>
+        <owl:inverseOf rdf:resource="http://vivo.northwestern.edu/ontology/vlocal#managesDataset"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://vivo.northwestern.edu/ontology/vlocal#managesDataset">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manages dataset</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+
 </rdf:RDF>
