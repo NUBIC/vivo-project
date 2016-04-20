@@ -4911,7 +4911,7 @@ vcard:Neighbor
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 vivo:orcidId
-      rdfs:label "ORCID iD"@en-US ;
+      rdfs:label "ORCiD identifier"@en-US ;
       vitro:customEntryFormAnnot
               "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddOrcidIdToPersonGenerator"^^xsd:string ;
       vitro:displayLimitAnnot
@@ -7702,6 +7702,25 @@ geo:codeAGROVOC
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
       vitro:publicDescriptionAnnot
               "An entity responsible for making contributions to the resource.  Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity."^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+<http://purl.org/dc/terms/description>
+      rdfs:label "description"@en-US ;
+      vitro:fullPropertyNameAnnot
+              "description"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupmapping> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+      vitro:publicDescriptionAnnot
+              "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."^^xsd:string ;
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 

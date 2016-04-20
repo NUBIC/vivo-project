@@ -119,7 +119,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://vivo.northwestern.edu/ontology/vlocal">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <rdfs:label xml:lang="en-US">Vlocal</rdfs:label>
+    <rdfs:label xml:lang="en-US">VIVO local ontology extensions</rdfs:label>
     <vitro:ontologyPrefixAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vlocal</vitro:ontologyPrefixAnnot>
   </rdf:Description>
   <rdf:Description rdf:about="http://vivo.northwestern.edu/ontology/vlocal#medlineCategory">
@@ -388,17 +388,24 @@ http://www.nlm.nih.gov/cgi/mesh/2015/MB_cgi?term=CONTROLLED+CLINICAL+TRIAL&#xD;
     <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</vitro:displayLimitAnnot>
   </rdf:Description>
 
-    <owl:ObjectProperty rdf:about="http://vivo.northwestern.edu/ontology/vlocal#datasetManagedBy">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dataset managed by</rdfs:label>
-        <owl:inverseOf rdf:resource="http://vivo.northwestern.edu/ontology/vlocal#managesDataset"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://vivo.northwestern.edu/ontology/vlocal#datasetManagedBy">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dataset managed by</rdfs:label>
+    <owl:inverseOf rdf:resource="http://vivo.northwestern.edu/ontology/vlocal#managesDataset"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://vivo.northwestern.edu/ontology/vlocal#managesDataset">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manages dataset</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://vivo.northwestern.edu/ontology/vlocal#managesDataset">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manages dataset</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://vivo.northwestern.edu/ontology/vlocal#downloadEndpoint">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">download endpoint</rdfs:label>
+    <!-- rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/-->
+    <rdfs:range rdf:resource="http://purl.org/ontology/bibo/uri"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </owl:DatatypeProperty>
 
 </rdf:RDF>
