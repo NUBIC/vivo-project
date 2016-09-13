@@ -7,8 +7,32 @@
             <properties>
                 <app-name>vivo</app-name>
 
-                <vivo-dir>/usr/local/vivo/home</vivo-dir>
+                <vivo-dir>/usr/local/vivo/data</vivo-dir>
+                <tomcat-dir>/usr/local/tomcat</tomcat-dir>
+
+                <default-theme>fsm</default-theme>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>pfr957</id>
+            <properties>
+                <app-name>vivo</app-name>
+
+                <vivo-dir>/usr/local/vivo/data4</vivo-dir>
                 <tomcat-dir>/usr/local/tomcat7</tomcat-dir>
+
+                <default-theme>fsm</default-theme>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>vtfsmvivo</id>
+            <properties>
+                <app-name>vivo</app-name>
+
+                <vivo-dir>/var/www/apps/vivo</vivo-dir>
+                <tomcat-dir>/usr/share/tomcat</tomcat-dir>
 
                 <default-theme>fsm</default-theme>
             </properties>
