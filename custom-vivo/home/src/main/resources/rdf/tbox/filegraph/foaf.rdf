@@ -1,0 +1,99 @@
+<!-- This is the FOAF formal vocabulary description, expressed using W3C RDFS and OWL markup. foaf/spec version -->
+<!-- For more information about FOAF:                                            -->
+<!--   see the FOAF project homepage, http://www.foaf-project.org/               -->
+<!--   FOAF specification, http://xmlns.com/foaf/spec/                             -->
+<!--                                                                             -->
+<!-- first we introduce a number of RDF namespaces we will be using... -->
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:owl="http://www.w3.org/2002/07/owl#" 
+	xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#" 
+	xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+	xmlns:wot="http://xmlns.com/wot/0.1/" 
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+<!-- Here we describe general characteristics of the FOAF vocabulary ('ontology'). -->
+  <owl:Ontology rdf:about="http://xmlns.com/foaf/0.1/" dc:title="Friend of a Friend (FOAF) vocabulary" dc:description="The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language." >
+  </owl:Ontology>
+
+
+  <!-- OWL/RDF interop section - geeks only -->
+  <!--  most folk can ignore this lot. the game here is to make FOAF
+  	work with vanilla RDF/RDFS tools, and with the stricter OWL DL 
+	profile of OWL. At the moment we're in the OWL Full flavour of OWL. 
+	The following are tricks to try have the spec live in both worlds
+	at once. See
+		http://phoebus.cs.man.ac.uk:9999/OWL/Validator
+		http://www.mindswap.org/2003/pellet/demo.shtml
+	...for some tools that help. 					-->
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/wot/0.1/assurance"/>
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/wot/0.1/src_assurance"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <!--  DC terms are NOT annotation properties in general, so we consider the following 
+	claims scoped to this document. They may be removed in future revisions if
+	OWL tools become more flexible. -->
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+  <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+
+<!--  <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal"/> -->
+  <!-- end of OWL/RDF interop voodoo. mostly. -->
+
+  <!-- utility class, a candidate for replacing the pattern of subproperty-ing rdfs:label -->
+  <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/LabelProperty" vs:term_status="unstable">
+    <rdfs:label>Label Property</rdfs:label>
+    <rdfs:comment>A foaf:LabelProperty is any RDF property with texual values that serve as labels.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+  </rdfs:Class>
+
+<!-- FOAF classes (types) are listed first. -->
+
+  <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Person" rdfs:label="Person" rdfs:comment="A person." vs:term_status="stable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:equivalentClass rdf:resource="http://schema.org/Person" />
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person" />
+<!--    <rdfs:subClassOf><owl:Class rdf:about="http://xmlns.com/wordnet/1.6/Person"/></rdfs:subClassOf> -->
+    <rdfs:subClassOf><owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/></rdfs:subClassOf>
+<!--    <rdfs:subClassOf><owl:Class rdf:about="http://xmlns.com/wordnet/1.6/Agent"/></rdfs:subClassOf> -->
+    <rdfs:subClassOf><owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" rdfs:label="Spatial Thing"/></rdfs:subClassOf>
+    <!-- aside: 
+	are spatial things always spatially located? 
+	Person includes imaginary people... discuss... -->
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+
+<!--    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Document"/> this was a mistake; tattoo'd people, for example. -->
+
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Document" rdfs:label="Document" rdfs:comment="A document." vs:term_status="stable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://schema.org/CreativeWork" />
+<!--    <rdfs:subClassOf rdf:resource="http://xmlns.com/wordnet/1.6/Document"/> -->
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Organization" rdfs:label="Organization" rdfs:comment="An organization." vs:term_status="stable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+<!--    <rdfs:subClassOf><owl:Class rdf:about="http://xmlns.com/wordnet/1.6/Organization"/></rdfs:subClassOf> -->
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Group" vs:term_status="stable" rdfs:label="Group" rdfs:comment="A class of Agents.">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Agent" vs:term_status="stable" rdfs:label="Agent" rdfs:comment="An agent (eg. person, group, software or physical artifact).">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://purl.org/dc/terms/Agent"/>
+<!--    <rdfs:subClassOf><owl:Class rdf:about="http://xmlns.com/wordnet/1.6/Agent-3"/></rdfs:subClassOf> -->
+  </rdfs:Class>
+
+</rdf:RDF>
+
